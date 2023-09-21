@@ -3,11 +3,17 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using GriffindorBlog.DAL.Interfaces;
 
 namespace GriffindorBlog.Controllers
 {
     public class BlogController : Controller
     {
+        public BlogController(IBlokDAL)
+        {
+
+        }
+        
 
         public IActionResult Index()
         {
@@ -31,6 +37,7 @@ namespace GriffindorBlog.Controllers
         //{
         //    return View();
         //}
+
         public IActionResult Register()
         {
             return View();
