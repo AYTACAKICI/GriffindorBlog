@@ -15,7 +15,7 @@ namespace GriffindorBlog.DAL.Interfaces
         User Login(string username,string Password);
         bool UserExists(string username);
         bool AddArticles(Article article);
-
+        
         List<Article> GetArticles();
         List<SelectListItem> Roles();
 

@@ -8,7 +8,7 @@ namespace GriffindorBlog.Controllers
 {
     public class BlogController : Controller
     {
-      
+
         public IActionResult Index()
         {
             return View();
@@ -35,7 +35,7 @@ namespace GriffindorBlog.Controllers
             return View();
         }
 
-        [HttpPost]
+        //[HttpPost]
         //public IActionResult Register()
         //{
         //    return View();
