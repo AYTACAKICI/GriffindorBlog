@@ -6,7 +6,7 @@
 @model User
 
 <form asp-controller="Blog" asp-action="Login" method="get" class="text-md-center">
-    <div class="container col-md-6" style="width: 800px; margin-top: 100px;">
+    <div class="container" style="width: 800px; margin-top: 100px;">
         <span style="font-size: 50pt">Griffindor Blog</span>
         <div class="container-fluid">
             <div style="width: 100%; max-width: 500px; margin: auto;">
@@ -16,33 +16,28 @@
 
         <div class="row justify-content-center">
             <div class="col-sm-4 col-md-6">
-
                 <div class="input-group mt-4">
                     <span class="input-group-text" id="basic-addon1">&#128100;</span>
                     <input type="text" class="form-control" placeholder="Username" aria-label="Username" aria-describedby="basic-addon1" />
                 </div>
+            </div>
 
+            <div class="col-sm-4 col-md-6">
                 <div class="input-group mt-4">
                     <span class="input-group-text" id="basic-addon1">&#128273;</span>
                     <input type="password" class="form-control" placeholder="Password" aria-Label="Password" aria-describedby="basic-addon1">
                 </div>
-
-                <div class="form-check mt-3 col-sm-12">
-                    <div>
-                        <input type="checkbox" class="form-check-input" id="exampleCheck1">
-                    </div>
-                    <label class="form-check-label" for="exampleCheck1" style="float:left">Beni Hatırla!</label>
-                    <p><a href="#" class="link-danger link-offset-2 link-underline-opacity-25 link-underline-opacity-100-hover" style="float:right">Şifremi Unuttum!</a></p>
-                </div>
-
-                <div class="input-group mt-4">
-                    <div class="col-sm-6 col-md-10">
-                        <a href="HtmlPage1.html" class="btn btn-outline-success" onclick="girisyap();" style="float:left; margin-top:15px; width:95px">Giriş Yap!</a>
-                        <a asp-controller="BlogController" asp-action="Register" input type="button" class="btn btn-outline-warning col-md-12">Register Now!</a>
-                    </div>
-                </div>
             </div>
         </div>
-        <hr />
+
+        <div class="row" style="margin-top: 20px;">
+            <div class="col-md-6">
+                <input type="submit" class="btn btn-outline-success btn-block" value="Sign In!" />
+            </div>
+            <div class="col-md-6">
+                <a asp-controller="Blog" asp-action="Register" input type="button" class="btn btn-outline-warning btn-block">Register Now!</a>
+            </div>
+        </div>
     </div>
+    <hr />
 </form>

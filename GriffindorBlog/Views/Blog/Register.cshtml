@@ -4,7 +4,7 @@
 @using GriffindorBlog.Database.Entities;
 @model User
 
-<form asp-controller="Blog" asp-action="Register" method="post">
+<form asp-controller="Blog" asp-action="Register" method="get">
 	<div class="container col-md-12">
 		<div class="container-fluid text-center" style="font-family:'Berlin Sans FB';color:crimson">
 			<h2>Login</h2>
@@ -59,7 +59,7 @@
 							<input type="submit" class="btn btn-outline-info col-md-12" value="Login" />
 						</div>
 						<div class="col-md-6 mt-4 ">
-							<a asp-controller="ShowEmployee" asp-action="ShowAll" input type="button" class="btn btn-outline-dark col-md-12">Cancel</a>
+							<a asp-controller="Blog" asp-action="Login" input type="button" class="btn btn-outline-dark col-md-12">Cancel</a>
 						</div>
 					</div>
 				</div>

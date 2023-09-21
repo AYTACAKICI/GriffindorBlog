@@ -9,6 +9,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\GriffindorBlog.DAL\GriffindorBlog.DAL.csproj" />
     <ProjectReference Include="..\GriffindorBlog.Database\GriffindorBlog.Database.csproj" />
   </ItemGroup>
 
