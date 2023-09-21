@@ -7,6 +7,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Web.Mvc;
 
 namespace GriffindorBlog.DAL.Concrete
 {
@@ -16,6 +17,27 @@ namespace GriffindorBlog.DAL.Concrete
         public BlokDAL(BlogContext context)
         {
             _context = context;
+        }
+
+        public bool AddArticles(Article article)
+        {
+            _context.Article.Add(article);
+          int returned =  _context.SaveChanges();
+            if (returned>0)
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+        }
+
+        public List<Article> GetArticles()
+        {
+           var articles = _context.Article.ToList();
+
+            return articles;
         }
 
         public User Login(string username,string password)
@@ -47,6 +69,12 @@ namespace GriffindorBlog.DAL.Concrete
             {
                 return null;
             }
+        }
+        public List<SelectListItem> Roles()
+        {
+            List<SelectListItem> roleList = (from role in _context.Role
+                                             select new SelectListItem { Text = role.RoleName, Value = role.RoleID.ToString() }).ToList();                                             
+            return roleList;
         }
 
         public bool UserExists(string username)
