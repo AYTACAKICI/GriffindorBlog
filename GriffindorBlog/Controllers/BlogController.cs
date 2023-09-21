@@ -22,9 +22,14 @@ namespace GriffindorBlog.Controllers
         }
         public IActionResult About()
         {
-            return View();
+           var articles = _blokdal.GetArticles();
+            return View(articles);
         }
         public IActionResult Contact()
+        {
+            return View();
+        }
+        public IActionResult Home()
         {
             return View();
         }

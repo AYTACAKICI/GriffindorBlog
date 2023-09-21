@@ -5,7 +5,7 @@
 @using GriffindorBlog.Database.Entities;
 @model User
 
-<form asp-controller="Blog" asp-action="Login" method="get" class="text-md-center">
+<form asp-controller="Blog" asp-action="Login" method="post" class="text-md-center">
     <div class="container" style="width: 800px; margin-top: 100px;">
         <span style="font-size: 50pt">Griffindor Blog</span>
         <div class="container-fluid">
@@ -18,14 +18,14 @@
             <div class="col-sm-4 col-md-6">
                 <div class="input-group mt-4">
                     <span class="input-group-text" id="basic-addon1">&#128100;</span>
-                    <input type="text" class="form-control" placeholder="Username" aria-label="Username" aria-describedby="basic-addon1" />
+                    <input type="text" class="form-control" placeholder="Username" asp-for="UserName" aria-label="Username" aria-describedby="basic-addon1" />
                 </div>
             </div>
 
             <div class="col-sm-4 col-md-6">
                 <div class="input-group mt-4">
                     <span class="input-group-text" id="basic-addon1">&#128273;</span>
-                    <input type="password" class="form-control" placeholder="Password" aria-Label="Password" aria-describedby="basic-addon1">
+                    <input type="password" class="form-control" placeholder="Password" asp-for="Password" aria-Label="Password" aria-describedby="basic-addon1">
                 </div>
             </div>
         </div>

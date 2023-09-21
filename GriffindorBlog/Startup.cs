@@ -27,8 +27,10 @@ namespace GriffindorBlog
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
+           
             services.AddDbContext<BlogContext>(a=>a.UseSqlServer(Configuration.GetConnectionString("BlogDb")));
             services.AddControllersWithViews();
+           
             services.AddScoped<IBlokDAL, BlokDAL>();
         }
 

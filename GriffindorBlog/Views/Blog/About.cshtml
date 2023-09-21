@@ -1,7 +1,6 @@
 ﻿@using GriffindorBlog.Database.Entities
 @model List<Article>
-@{
-}
+
 <header class="masthead" style="background-image: url('/img/About-bg.jpg')">
     <div class="overlay"></div>
     <div class="container">
@@ -59,8 +58,7 @@
                         <div class="d-flex justify-content-between tm-pt-45">
                             <span class="tm-color-primary">@item.CreateTime</span>
                             <span class="tm-color-primary">
-                                if(@item.UpdateTime != null)
-
+                                @if(@item.UpdateTime != null)
                                 {
                                 @item.UpdateTime
                                 }

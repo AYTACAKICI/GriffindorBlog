@@ -72,8 +72,9 @@ namespace GriffindorBlog.DAL.Concrete
         }
         public List<SelectListItem> Roles()
         {
-            List<SelectListItem> roleList = (from role in _context.Role
-                                             select new SelectListItem { Text = role.RoleName, Value = role.RoleID.ToString() }).ToList();                                             
+            //List<SelectListItem> roleList = (from role in _context.Role
+            //                                 select new SelectListItem { Text = role.RoleName, Value = role.RoleID.ToString() }).ToList();
+            List<SelectListItem> roleList = _context.Role.Select(x => new SelectListItem() { Text = x.RoleName, Value = x.RoleID.ToString() }).ToList();                    
             return roleList;
         }
 
