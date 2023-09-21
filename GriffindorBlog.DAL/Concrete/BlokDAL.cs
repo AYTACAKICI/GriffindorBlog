@@ -11,7 +11,7 @@ using System.Web.Mvc;
 
 namespace GriffindorBlog.DAL.Concrete
 {
-    class BlokDAL : IBlokDAL
+   public class BlokDAL : IBlokDAL
     {
         BlogContext _context;
         public BlokDAL(BlogContext context)

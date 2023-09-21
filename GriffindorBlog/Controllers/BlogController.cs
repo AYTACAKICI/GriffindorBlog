@@ -41,11 +41,8 @@ namespace GriffindorBlog.Controllers
             if (ModelState.IsValid)
             {
              _blokdal.Login(user.UserName, user.Password);
-               
-            }
-            if (user != null)
-            {
                 return RedirectToAction("About");
+
             }
             else
             {
@@ -57,6 +54,7 @@ namespace GriffindorBlog.Controllers
         [HttpGet]
         public IActionResult Register()
         {
+          ViewBag.roles= _blokdal.Roles();
             return View();
         }
 
