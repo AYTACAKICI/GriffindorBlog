@@ -5,12 +5,6 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Folder Include="DAL\Interfaces\" />
-    <Folder Include="DAL\Concrete\" />
-    <Folder Include="GriffindorBlogDatabase\DBContext\" />
-  </ItemGroup>
-
-  <ItemGroup>
     <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="5.0.2" />
   </ItemGroup>
 

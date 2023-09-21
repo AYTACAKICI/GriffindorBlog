@@ -1,0 +1,75 @@
+﻿
+<link href="c:\users\lenovo\onedrive\masaüstü\webprojemcore\webprojem.ui.gui\wwwroot\css\site.css" rel="stylesheet" />
+<script src="c:\users\lenovo\onedrive\masaüstü\webprojemcore\webprojem.ui.gui\wwwroot\js\site.js"></script>
+@using GriffindorBlog.Database.Entities;
+@model User
+
+<form asp-controller="Blog" asp-action="Register" method="post">
+
+	<div class="container col-md-12">
+		<div class="container-fluid text-center" style="font-family:'Berlin Sans FB';color:crimson">
+			<h2>Login</h2>
+		</div>
+		<hr />
+		<div class="row justify-content">
+			<div class="container">
+				<div class="col-sm-2 col-md-6" style="margin:auto">
+					<div class="container mt-4">
+						<div class="row">
+							<div class="col-md-6">
+								<div class="input-group">
+									<span class="input-group-text">&#128699</span>
+									<input type="text" name="FirstName" class="form-control" placeholder="First Name">
+								</div>
+							</div>
+							<div class="col-md-6">
+								<div class="input-group">
+									<span class="input-group-text">&#128160</span>
+									<input type="text" name="LastName" class="form-control" placeholder="Last Name">
+								</div>
+							</div>
+						</div>
+
+						<div class="input-group mt-4">
+							<span class="input-group-text">&#128100</span>
+							<input type="text" class="form-control" name="UserName" placeholder="Username" minLlength="4" maxlength="12" title="Geçerli bir Kullanıcı adı giriniz!">
+						</div>
+
+						<div class="input-group mt-4">
+							<span class="input-group-text">&#128273</span>
+							<input type="text" name="Password" class="form-control" placeholder="Password" minlength="8" maxlength="32">
+						</div>
+
+						<div class="input-group mt-4">
+							<span class="input-group-text"> &#9993</span>
+							<input type="email" name="Email" class="form-control" placeholder="e-Mail">
+						</div>
+
+						<div class="input-group mt-4">
+							<span class="input-group-text">&#9997</span>
+							<select name="RoleName" class="form-select">
+								<option value="" selected disabled>Choose a Role Name</option>
+								<option value="Administrator">Administrator</option>
+								<option value="Chief-Editor">Chief-Editor</option>
+								<option value="Senior-Editor">Editor</option>
+								<option value="Junior-Editor">Junior-Editor</option>
+								<option value="Author">Author</option>
+
+							</select>
+						</div>
+					</div>
+
+					<div class="row col-md-12 mb-3" style="margin:auto">
+
+						<div class="col-md-6 mt-4 ">
+							<input type="submit" class="btn btn-outline-info col-md-12" value="Login" />
+						</div>
+						<div class="col-md-6 mt-4 ">
+							<a asp-controller="ShowEmployee" asp-action="ShowAll" input type="button" class="btn btn-outline-dark col-md-12">Cancel</a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</form>

@@ -5,8 +5,7 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Folder Include="Concrete\" />
-    <Folder Include="Interfaces\" />
+    <ProjectReference Include="..\GriffindorBlog.Database\GriffindorBlog.Database.csproj" />
   </ItemGroup>
 
 </Project>
