@@ -1,0 +1,21 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net5.0</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Folder Include="DAL\Interfaces\" />
+    <Folder Include="DAL\Concrete\" />
+    <Folder Include="GriffindorBlogDatabase\DBContext\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="5.0.2" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\GriffindorBlog.Database\GriffindorBlog.Database.csproj" />
+  </ItemGroup>
+
+</Project>
