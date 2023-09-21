@@ -9,11 +9,7 @@ namespace GriffindorBlog.Controllers
 {
     public class BlogController : Controller
     {
-        public BlogController(IBlokDAL)
-        {
-
-        }
-        
+       
 
         public IActionResult Index()
         {
