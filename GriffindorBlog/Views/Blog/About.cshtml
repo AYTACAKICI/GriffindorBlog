@@ -1,31 +1,124 @@
-﻿@*
-    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
-*@
+﻿@using GriffindorBlog.Database.Entities
+@model List<Article>
 @{
 }
-<header class="masthead" style="background-image: url('/img/about-bg.jpg')">
+<header class="masthead" style="background-image: url('/img/About-bg.jpg')">
     <div class="overlay"></div>
     <div class="container">
         <div class="row">
             <div class="col-lg-8 col-md-10 mx-auto">
                 <div class="page-heading">
-                    <h1>About Me</h1>
-                    <span class="subheading">This is what I do.</span>
+                    <h1>Article Me</h1>
+                    <span class="subheading">This is my article</span>
                 </div>
             </div>
         </div>
     </div>
+
+
 </header>
 
-<!-- Main Content -->
-<div class="container">
-    <div class="row">
-        <div class="col-lg-8 col-md-10 mx-auto">
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Saepe nostrum ullam eveniet pariatur voluptates odit, fuga atque ea nobis sit soluta odio, adipisci quas excepturi maxime quae totam ducimus consectetur?</p>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eius praesentium recusandae illo eaque architecto error, repellendus iusto reprehenderit, doloribus, minus sunt. Numquam at quae voluptatum in officia voluptas voluptatibus, minus!</p>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut consequuntur magnam, excepturi aliquid ex itaque esse est vero natus quae optio aperiam soluta voluptatibus corporis atque iste neque sit tempora!</p>
+
+
+<body>
+    <header class="tm-header" id="tm-header">
+        <div class="tm-header-wrapper">
+
+            <p class="tm-mb-80 pr-5 text-white">
+                Xtra Blog is a multi-purpose HTML template from TemplateMo website. Left side is a sticky menu bar. Right side content will scroll up and down.
+            </p>
         </div>
+    </header>
+    <div class="container">
+        <main class="tm-main">
+            <!-- Search form -->
+            <div class="row tm-row">
+                <div class="col-12">
+                    <form method="GET" class="form-inline tm-mb-80 tm-search-form">
+                        <input class="form-control tm-search-input" name="query" type="text" placeholder="Search..." aria-label="Search">
+                        <button class="tm-search-button" type="submit">
+                            <i class="fas fa-search tm-search-icon" aria-hidden="true"></i>
+                        </button>
+                    </form>
+                </div>
+            </div>
+            @foreach (var item in Model)
+            {
+                <div class="row tm-row">
+
+                    <article class="col-12 col-md-5 tm-post">
+                        <hr class="tm-hr-primary">
+                        <a href="post.html" class="effect-lily tm-post-link tm-pt-60">
+
+
+                            <h2 class="tm-pt-30 tm-color-primary tm-post-title">@item.ArticleTitleName</h2>
+                        </a>
+                        <p class="tm-pt-30">
+                            @item.Content
+                        </p>
+                        <div class="d-flex justify-content-between tm-pt-45">
+                            <span class="tm-color-primary">@item.CreateTime</span>
+                            <span class="tm-color-primary">
+                                if(@item.UpdateTime != null)
+
+                                {
+                                @item.UpdateTime
+                                }
+
+                            </span>
+                        </div>
+                        <hr>
+                        <div class="d-flex justify-content-between">
+
+                        </div>
+                    </article>
+
+
+
+
+                </div>
+
+            }
+
+            <div class="row tm-row tm-mt-100 tm-mb-75">
+                <div class="tm-prev-next-wrapper">
+                    <a href="#" class="mb-2 tm-btn tm-btn-primary tm-prev-next disabled tm-mr-20">Prev</a>
+                    <a href="#" class="mb-2 tm-btn tm-btn-primary tm-prev-next">Next</a>
+                </div>
+                <div class="tm-paging-wrapper">
+                    <span class="d-inline-block mr-3">Page</span>
+                    <nav class="tm-paging-nav d-inline-block">
+                        <ul>
+                            <li class="tm-paging-item active">
+                                <a href="#" class="mb-2 tm-btn tm-paging-link">1</a>
+                            </li>
+                            <li class="tm-paging-item">
+                                <a href="#" class="mb-2 tm-btn tm-paging-link">2</a>
+                            </li>
+                            <li class="tm-paging-item">
+                                <a href="#" class="mb-2 tm-btn tm-paging-link">3</a>
+                            </li>
+                            <li class="tm-paging-item">
+                                <a href="#" class="mb-2 tm-btn tm-paging-link">4</a>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+            <footer class="row tm-row">
+                <hr class="col-12">
+                <div class="col-md-6 col-12 tm-color-gray">
+                    Design: <a rel="nofollow" target="_parent" href="https://templatemo.com" class="tm-external-link">TemplateMo</a>
+                </div>
+                <div class="col-md-6 col-12 tm-color-gray tm-copyright">
+                    Copyright 2020 Xtra Blog Company Co. Ltd.
+                </div>
+            </footer>
+        </main>
     </div>
-</div>
+    <script src="~/templatemo_553_xtra_blog/js/jquery.min.js"></script>
+    <script src="~/templatemo_553_xtra_blog/js/templatemo-script.js"></script>
+</body>
+
 
 <hr>
