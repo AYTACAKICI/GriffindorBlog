@@ -20,7 +20,7 @@ namespace GriffindorBlog.Database.Context
         }
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
-            optionsBuilder.UseSqlServer("Server = AYTACAKICI\\SQLEXPRESS; Database = BlogDb; uid = sa; pwd = 123");
+            optionsBuilder.UseSqlServer("Server = AYTACAKICI\\SQLEXPRESS; Database = BlogDb1; uid = sa; pwd = 123");
             base.OnConfiguring(optionsBuilder);
         }
         protected override void OnModelCreating(ModelBuilder modelBuilder)

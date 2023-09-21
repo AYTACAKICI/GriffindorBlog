@@ -99,6 +99,9 @@ namespace GriffindorBlog.Database.Migrations
                     b.Property<string>("Email")
                         .HasColumnType("nvarchar(max)");
 
+                    b.Property<string>("FirstName")
+                        .HasColumnType("nvarchar(max)");
+
                     b.Property<string>("Lastname")
                         .HasColumnType("nvarchar(max)");
 
