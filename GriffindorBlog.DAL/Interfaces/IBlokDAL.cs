@@ -9,7 +9,7 @@ using System.Web.Mvc;
 
 namespace GriffindorBlog.DAL.Interfaces
 {
-    interface IBlokDAL
+   public interface IBlokDAL
     {
         User Register(User user);
         User Login(string username,string Password);

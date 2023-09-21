@@ -1,3 +1,5 @@
+using GriffindorBlog.DAL.Interfaces;
+using GriffindorBlog.DAL.Concrete;
 using GriffindorBlog.Database.Context;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
@@ -27,6 +29,7 @@ namespace GriffindorBlog
         {
             services.AddDbContext<BlogContext>(a=>a.UseSqlServer(Configuration.GetConnectionString("BlogDb")));
             services.AddControllersWithViews();
+            services.AddScoped<IBlokDAL, BlokDAL>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
