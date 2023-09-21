@@ -35,7 +35,7 @@ namespace GriffindorBlog.Controllers
             return View();
         }
 
-        //[HttpPost]
+        [HttpPost]
         //public IActionResult Register()
         //{
         //    return View();

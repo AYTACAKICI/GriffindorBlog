@@ -70,7 +70,6 @@ namespace GriffindorBlog.DAL.Concrete
                 return null;
             }
         }
-
         public List<SelectListItem> Roles()
         {
             List<SelectListItem> roleList = (from role in _context.Role
