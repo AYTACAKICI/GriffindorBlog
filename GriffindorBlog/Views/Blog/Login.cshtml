@@ -1,75 +1,65 @@
-﻿
+﻿@*
 <link href="c:\users\lenovo\onedrive\masaüstü\webprojemcore\webprojem.ui.gui\wwwroot\css\site.css" rel="stylesheet" />
-<script src="c:\users\lenovo\onedrive\masaüstü\webprojemcore\webprojem.ui.gui\wwwroot\js\site.js"></script>
+<script src="c:\users\lenovo\onedrive\masaüstü\webprojemcore\webprojem.ui.gui\wwwroot\js\site.js"></script>*@
 @using GriffindorBlog.Database.Entities;
 @model User
 
-<form asp-controller="Blog" asp-action="Register" method="post">
-
-	<div class="container col-md-12">
-		<div class="container-fluid text-center" style="font-family:'Berlin Sans FB';color:crimson">
-			<h2>Login</h2>
-		</div>
-		<hr />
-		<div class="row justify-content">
-			<div class="container">
-				<div class="col-sm-2 col-md-6" style="margin:auto">
-					<div class="container mt-4">
-						<div class="row">
-							<div class="col-md-6">
-								<div class="input-group">
-									<span class="input-group-text">&#128699</span>
-									<input type="text" name="FirstName" class="form-control" placeholder="First Name">
-								</div>
-							</div>
-							<div class="col-md-6">
-								<div class="input-group">
-									<span class="input-group-text">&#128160</span>
-									<input type="text" name="LastName" class="form-control" placeholder="Last Name">
-								</div>
-							</div>
-						</div>
-
-						<div class="input-group mt-4">
-							<span class="input-group-text">&#128100</span>
-							<input type="text" class="form-control" name="UserName" placeholder="Username" minLlength="4" maxlength="12" title="Geçerli bir Kullanıcı adı giriniz!">
-						</div>
-
-						<div class="input-group mt-4">
-							<span class="input-group-text">&#128273</span>
-							<input type="text" name="Password" class="form-control" placeholder="Password" minlength="8" maxlength="32">
-						</div>
-
-						<div class="input-group mt-4">
-							<span class="input-group-text"> &#9993</span>
-							<input type="email" name="Email" class="form-control" placeholder="e-Mail">
-						</div>
-
-						<div class="input-group mt-4">
-							<span class="input-group-text">&#9997</span>
-							<select name="RoleName" class="form-select">
-								<option value="" selected disabled>Choose a Role Name</option>
-								<option value="Administrator">Administrator</option>
-								<option value="Chief-Editor">Chief-Editor</option>
-								<option value="Senior-Editor">Editor</option>
-								<option value="Junior-Editor">Junior-Editor</option>
-								<option value="Author">Author</option>
-
-							</select>
-						</div>
-					</div>
-
-					<div class="row col-md-12 mb-3" style="margin:auto">
-
-						<div class="col-md-6 mt-4 ">
-							<input type="submit" class="btn btn-outline-info col-md-12" value="Login" />
-						</div>
-						<div class="col-md-6 mt-4 ">
-							<a asp-controller="ShowEmployee" asp-action="ShowAll" input type="button" class="btn btn-outline-dark col-md-12">Cancel</a>
-						</div>
-					</div>
-				</div>
+<form asp-controller="Blog" asp-action="Login" method="get" class="text-md-center">
+	<div class="container col-md-6" style="width:800px; height:800px; margin-top:100px">
+		<span style="font-size:50pt">&#129418GriffindorBlog&#129418</span>
+		<div class="container-fluid">
+			<div style="width: 100%; max-width: 500px; margin: auto;">
 			</div>
 		</div>
+		<hr />
+
+		<div class="row justify-content">
+			
+				<div class="col-sm-4 col-md-6" style="margin:auto">
+
+					<div class="input-group mt-4">
+						<span class="input-group-text" id="basic-addon1">&#128100</span>
+						<input type="text" class="form-control" placeholder="Username" aria-label="Username" aria-describedby="basic-addon1" />
+					</div>
+
+					<div class="input-group mt-4">
+						<span for="exampleInputPassword1" class="input-group-text" id="basic-addon1">&#128273</span>
+						<input type="password" class="form-control" placeholder="Password" aria-Label="Password" aria-describedby="exampleInputPassword1">
+					</div>
+
+					<div class="form-check mt-3 col-sm-12" style="margin-block-start:auto">
+						<div><input type="checkbox" class="form-check-input" id="exampleCheck1"></div>
+						<label class="form-check-label" for="exampleCheck1" style="float:left">Beni Hatırla!</label>
+						<p><a href="#" class="link-danger link-offset-2 link-underline-opacity-25 link-underline-opacity-100-hover" style="float:right">Şifremi Unuttum!</a></p>
+					</div>
+
+					<div class="col-sm-6 col-md-10" style="margin-block-start:auto">
+						<a href="HtmlPage1.html" class="btn btn-outline-success" onclick="girisyap();" style="float:left; margin-top:15px; width:95px">Giriş Yap!</a>
+
+						<a href="KaydolEkrani.html" type="submit" class="btn btn-outline-danger" style="float:left; margin-left:10px; width:95px; margin-top:15px">Kaydol</a>
+					</div>
+
+				</div>
+		
+		</div>
+		<hr />
+		<footer>
+			<p style="font-weight:bold;float:left">© Copyright &#x1F377Griffindor A.Ş. </p>
+			<p style="float:right">
+				<b>Çözüm Ortaklarımız:</b>
+				<span>
+					<a href="https://www.microsoft.com/tr-tr/" title="Microsoft" style="text-decoration:none">&#x1F4BB</a>
+					<a href="https://www.google.com/" title="Google" style="text-decoration:none">&#x1F310</a>
+					<a href="https://www.apple.com/tr/" title="Apple" style="text-decoration:none">&#x1F34E</a>
+					<a href="https://www.samsung.com/tr/" title="Samsung" style="text-decoration:none"> &#x1F4F1</a>
+					<a href="https://www.facebook.com.tr" title="Facebook" style="text-decoration:none">&#x1F44D</a>
+					<a href="https://www.twitter.com.tr" title="Twitter" style="text-decoration:none">&#x1F426</a>
+					<a href="https://www.instagram.com.tr" title="İnstagram" style="text-decoration:none">&#x1F4F7</a>
+					<a href="https://www.adobe.com/tr/" title="Adobe" style="text-decoration:none">&#x1F58C</a>
+				</span>
+
+			</p>
+		</footer>
+
 	</div>
 </form>
