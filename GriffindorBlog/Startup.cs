@@ -58,7 +58,7 @@ namespace GriffindorBlog
             {
                 endpoints.MapControllerRoute(
                     name: "default",
-                    pattern: "{controller=Blog}/{action=Index}/{id?}");
+                    pattern: "{controller=Blog}/{action=Login}/{id?}");
             });
         }
     }

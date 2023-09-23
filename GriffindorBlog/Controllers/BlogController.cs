@@ -45,8 +45,15 @@ namespace GriffindorBlog.Controllers
            
             if (ModelState.IsValid)
             {
-             _blokdal.Login(user.UserName, user.Password);
-                return RedirectToAction("About");
+               var retuned =   _blokdal.Login(user.UserName, user.Password);
+                if (retuned.UserName==null)
+                {
+                    return RedirectToAction("LoginError");
+                }
+                else
+                {
+                    return RedirectToAction("About");
+                }
 
             }
             else
@@ -56,6 +63,14 @@ namespace GriffindorBlog.Controllers
 
 
         }
+        [HttpGet]
+        public IActionResult LoginError()
+        {
+            
+            return View();
+        }
+
+
         [HttpGet]
         public IActionResult Register()
         {
@@ -69,9 +84,15 @@ namespace GriffindorBlog.Controllers
             
             if(ModelState.IsValid)
             {
-                _blokdal.Register(user);
+                if (user.UserName != null&&user.Lastname!=null && user.Password !=null)
+                {
+                    _blokdal.Register(user);
+                    return RedirectToAction("Login");
+                }
+              
             }
-            return RedirectToAction("Index");
+            return RedirectToAction("Register");
+
         }
     }
 }
